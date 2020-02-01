@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Dao.EmployeeMapper">
+     <select id="getEmpById" parameterType="Integer" resultType="com.example.demo.Model.Employee">
+         select * from employee where id=#{id};
+     </select>
+    <update id="updateEmp" parameterType="com.example.demo.Model.Employee">
+        update employee set last_name=#{lastName},gender=#{gender} where id=#{id}
+    </update>
+
+    <delete id="deleteEmp" parameterType="Integer">
+        delete from employee where id=#{id}
+    </delete>
+    <insert id="insert" parameterType="com.example.demo.Model.Employee">
+        insert into employee (last_name,email,gender) values (#{lastName},#{email},#{gender},#{dId})
+    </insert>
+</mapper>
