@@ -12,7 +12,6 @@ public class Employee implements Serializable {
    private Integer gender;
    private  Integer did;
    private String age;
-   String a001;
-
+   private String uuid;
 
 }
